@@ -1,0 +1,32 @@
+
+<!-- html code start -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>i am there </title>
+</head>
+<body>
+    <div class="contet" id="chn">happy new year for all</div>
+    <div class="contet">Lorem, ipsum dolor sit amet consectetur adipisicing</div>
+    <form action = '/' method="post">
+        <input type="email" name="mail" required>
+     <input type="password" name="pass" required >
+        <input type="submit">
+    </form>
+    <div> your mail is <%= locals.mail || ' ' %></div>
+    <div> your pass is <%= locals.pass || ' ' %></div>
+    <img src="media/imgs/Capturedécran(7).png" alt="this is an image" width="350" height="200">
+    <script>
+        fetch('/tree').then((res)=>{document.getElementById('chn').value = res ; console.log(res)}).catch((err)=>{console.log(err)})
+    </script>
+</body>
+</html>
+
+<!-- html code stop -->
+
+
+
